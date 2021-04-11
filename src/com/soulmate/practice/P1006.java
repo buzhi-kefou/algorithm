@@ -4,10 +4,6 @@ import java.util.LinkedList;
 
 public class P1006 {
 
-    public static void main(String[] args) {
-        System.out.println(new P1006().clumsy(10));
-    }
-
     public int clumsy(int N) {
         LinkedList<Character> operate = new LinkedList<>();
         LinkedList<Integer> num = new LinkedList<>();
