@@ -11,20 +11,14 @@ public class P897 {
     }
 
     private void func(TreeNode node){
-        if(node==null)
+        if (node == null)
             return;
-        if(node.left==null&&node.right==null){
-            if(!list.isEmpty())
-                list.getLast().right=node;
-            list.addLast(node);
-        }else {
-            func(node.left);
-            node.left=null;
-            if(!list.isEmpty())
-                list.getLast().right=node;
-            list.addLast(node);
-            func(node.right);
-        }
+        func(node.left);
+        node.left = null;
+        if (!list.isEmpty())
+            list.getLast().right = node;
+        list.addLast(node);
+        func(node.right);
     }
 
     static class TreeNode {
